@@ -1,0 +1,93 @@
+
+body {
+      background-color: lightgray;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+}
+.navbar {
+      width: 100%;
+      height: 50px;
+      text-align: center;
+      position: fixed;
+      background-color: green;
+      top: 0;
+      left: 0;
+}
+.navbar ul {
+      list-style: none;
+      font-size: 22px;
+      color: white;
+      padding: 10px;
+}
+.navbar ul li{
+      position: relative;
+      top: -20px;
+      display: inline-block;
+      width: 150px;
+}
+.navbar ul li::before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: chocolate;
+}
+
+.formulaire{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background-color: whitesmoke;
+      padding: 0 35px 25px ;
+}
+.container{
+      display: flex;
+}
+.container .content{
+      border: 1px solid gray;
+      padding: 30px;
+      margin-bottom: 41px;
+}
+.container .cont1{
+      margin-right: 20px;
+}
+.container .cont2{
+      padding-top: 50px;
+      margin-left: 20px;
+}
+h1{
+      color: orangered;
+      font-size: 25px;
+}
+.visible{
+      visibility: visible;
+      transition: .3s;
+      transform: scaleY(0);
+      transform-origin: top;
+}
+input[type='submit']{
+      background-color: orangered;
+      padding: 6px 18px;
+      background-color: 6px;
+      color: white;
+      border-radius: 6px;
+      font-weight: bold;
+      border: none;
+      margin-right: 80px;
+      transition: all .6s;
+}
+#btn_modif{
+      padding: 6px 70px;
+}
+input[type='submit']:hover{
+      background-color: orange;
+}

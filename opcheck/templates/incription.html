@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block titre %}Inscription{% endblock %}
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href=" {% static 'css/incription.css' %} ">
+{% endblock %}
+
+{% block navbar %}
+<div>
+      <nav class="navbar">
+            <ul class="">
+                  <li > OpCheck</li>
+            </ul>
+      </nav>
+</div>
+{% endblock %}
+
+{% block contenu %}
+<div class="formulaire">
+      <h1>Page d'inscription</h1>
+      <form action="" method="post">
+            <div class="container">
+                  <div class="content cont1">
+                        <table>
+                              <tbody>
+                                    <tr>
+                                          <td >Nom</td>
+                                          <td> <input type="text"> </td>
+                                    </tr>
+                                    <tr>
+                                          <td>Prenom</td>
+                                          <td> <input type="text"> </td>
+                                    </tr>
+                                    <tr>
+                                          <td> Date de naissance</td>
+                                          <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                          <td>E-mail</td>
+                                          <td><input type="email"></td>
+                                    </tr>
+                                    <tr>
+                                          <td>Téléphone</td>
+                                          <td> <input type="number"></td>
+                                    </tr>
+                              </tbody>
+                        </table>
+                  </div>
+                  <div class="content cont2">
+                        <table>
+                              <tbody>
+                                    <tr>
+                                          <td>Username</td>
+                                          <td> <input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                          <td>Mot de passe</td>
+                                          <td> <input type="password"> </td>
+                                    </tr>
+                                    <tr>
+                                          <td> Confirmation</td>
+                                          <td><input type="password"></td>
+                                    </tr>
+                              </tbody>
+                        </table>
+                  </div>
+            </div>
+            <div>
+                  <input type="submit" value="Creer un compte">
+                  <a href="{% url 'connexion' %}">Je possède déjà un compte</a>
+            </div>
+      </form>
+</div>
+{% endblock %}
+

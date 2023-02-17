@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block titre %}Connexion{% endblock %}
+{% block contenu %}
+<form action="" method="post">
+      <div>
+            <div class="container">
+                  <div class="titre">Connexion</div>
+                  <div class="inp">
+                        <label for="email" class="email">Email</label>
+                        <input type="text" id="email" class="input">
+                  </div>
+                  <div class="inp">
+                        <label for="mdp">Mot de passe</label>
+                        <input type="text" id="mdp" class="input">
+                  </div>
+                  <div class="inp">
+                        <input type="submit" value="Connexion" class="bttn" class="input">
+                        <a href="{% url 'inscription' %}" style="font-weight: bold;"> Avez-vous un compte ?</a>
+                  </div>
+            </div>
+            <div></div>
+      </div>
+    </form>
+{% endblock %}
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href=" {% static 'css/connexion.css' %} ">
+{% endblock %}
+
+{% block navbar %}
+<div>
+      <nav>
+            <ul class="">
+                  <li > OpCheck</li>
+            </ul>
+      </nav>
+</div>
+{% endblock %}

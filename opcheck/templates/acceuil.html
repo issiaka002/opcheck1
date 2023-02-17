@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block titre %}Acceuil{% endblock %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href=" {% static 'css/acceuil.css' %} ">
+{% endblock %}
+
+{% block navbar %}
+<div>
+      <nav class="navbar">
+            <ul class="">
+                  <li > OpCheck</li>
+            </ul>
+          <div class="menu">
+            <hr>
+            <hr>
+          </div>
+          <div id="list_menu">
+            <li><a href="{% url 'acceuil' %}">Dechou ulrich</a></li>
+            <hr>
+            <li><a href="{% url 'profil' %}">Voir le profil</a></li>
+            <hr>
+            <li><a href="{% url 'afficheProfil' %}">Modifier le profil</a></li>
+            <hr>
+            <li><a href="{% url 'connexion' %}">Deconnexion</a></li>
+
+          </div>
+      </nav>
+</div>
+{% endblock %}
+{% block contenu %}
+<div class="contain">
+      <h2>Page d'accueil</h2>
+     <div class="container">
+      <div class="content cont1">
+            <h3>Mes comptes</h3>
+            <p>
+                  <img src="{% static 'images/image1.JPG' %}" alt="" style="width: 300px; height:130;">
+            </p>
+            <p>
+                  <img src="{% static 'images/image2.JPG' %}" alt="" style="width: 300px; height:130;">
+            </p>
+      </div>
+      <div class="content cont2">
+            <p class="transaction">Transaction</p>
+            <hr>
+            <div class="int">
+                  <p>Interne</p>
+            </div>
+            <div class="depot">
+                  <p>Dépôt : 15.000 FCFA</p>
+                  <p>De => 120-234-947</p>
+                  <p>Vers => 243-658-213</p>
+      </div>
+            <div class="ext">
+                  <p >Externe </p>
+            </div>
+            <div class="depot">
+                        <p>Dépôt : 15.000 FCFA</p>
+                        <p>De => 120-234-947</p>
+                        <p>Vers => 243-658-213</p>
+            </div>
+      </div>
+</div>
+</div>
+{% endblock %}

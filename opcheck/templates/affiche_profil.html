@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% block titre %}Affiche profil{% endblock %}
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href=" {% static 'css/afficheProfil.css' %} ">
+{% endblock %}
+
+{% block navbar %}
+<style>
+      .navbar ul {
+      list-style: none;
+      font-size: 22px;
+      color: white;
+      padding: 10px;
+      margin-left: 50px;
+}
+.navbar ul li{
+      position: relative;
+      top: -20px;
+      display: inline-block;
+      width: 150px;
+}
+.navbar ul li::before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: chocolate;
+      left: -34px;
+}
+.menu{
+      width: 40px;
+      height: 35px;
+      border-radius: 6px;
+      background-color: white;
+      position: absolute;
+      top: 10px;
+      right: 0;
+}
+.menu hr{
+      width: 50px;
+      height: 2.5px;
+      background-color: black;
+}
+#list_menu{
+      position: absolute;
+      top: 56px;
+      right: 5px;
+      background-color: white;
+      padding: 10px 15px;
+      border-radius: 4px;
+      /* visibility: hidden; */
+      /* transition: .5s;
+      transform: scaleY(0);
+      transform-origin: top; */
+
+}
+li{
+      list-style: none;
+}
+a{
+      text-decoration: none;
+}
+</style>
+<div>
+      <nav class="navbar">
+            <ul class="">
+                  <li > OpCheck</li>
+            </ul>
+          <div class="menu">
+            <hr>
+            <hr>
+          </div>
+          <div id="list_menu">
+            <li><a href="{% url 'acceuil' %}">Dechou ulrich</a></li>
+            <hr>
+            <li><a href="{% url 'profil' %}">Voir le profil</a></li>
+            <hr>
+            <li><a href="{% url 'afficheProfil' %}">Modifier le profil</a></li>
+            <hr>
+            <li><a href="{% url 'connexion' %}">Deconnexion</a></li>
+
+          </div>
+      </nav>
+</div>
+{% endblock %}
+{% block contenu %}
+<div class="formulaire">
+      <h1>Affichage profil</h1>
+      <form action="" method="post">
+            <div class="container">
+                  <div class="content cont1">
+                        <table>
+                              <tbody>
+                                    <tr>
+                                          <td >Nom</td>
+                                          <td> <input type="text"> </td>
+                                    </tr>
+                                    <tr>
+                                          <td>Prenom</td>
+                                          <td> <input type="text"> </td>
+                                    </tr>
+                                    <tr>
+                                          <td> Date de naissance</td>
+                                          <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                          <td>E-mail</td>
+                                          <td><input type="email"></td>
+                                    </tr>
+                                    <tr>
+                                          <td>Téléphone</td>
+                                          <td> <input type="number"></td>
+                                    </tr>
+                              </tbody>
+                        </table>
+                  </div>
+                  <div class="content cont2">
+                        <table>
+                              <tbody>
+                                    <tr>
+                                          <td>Username</td>
+                                          <td> <input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                          <td>Mot de passe</td>
+                                          <td> <input type="password"> </td>
+                                    </tr>
+                              </tbody>
+                        </table>
+
+                  </div>
+            </div>
+            <div>
+                  <input type="submit" value="retour" id="btn_modif" >
+                  <input type="submit" value="Modifier profil" id="btn_modif " >
+            </div>
+      </form>
+</div>
+{% endblock %}

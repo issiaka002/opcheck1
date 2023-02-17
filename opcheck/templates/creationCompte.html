@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% block titre %}Creation compte{% endblock %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/incription.css' %}">
+<link rel="stylesheet" href="{% static 'css/profil.css' %}">
+{% endblock %}
+
+{% block contenu %}
+<div class="formulaire">
+      <h1>Affichage profil</h1>
+      <form action="" method="post">
+            <div class="container">
+                  <div class="content cont2">
+                        <table>
+                              <tbody>
+                                    <tr>
+                                          <td>Username</td>
+                                          <td> <input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                          <td>Mot de passe</td>
+                                          <td> <input type="password"> </td>
+                                    </tr>
+                              </tbody>
+                        </table>
+
+                  </div>
+            </div>
+            <div>
+                  <button class="btn_return">Retour</button>
+                  <button class="btn_create">Creation de compte</button>
+            </div>
+      </form>
+</div>
+<style>
+      .btn_return{
+            border: none;
+            background-color: orangered;
+            padding: 6px 41px;
+            color: white;
+            border-radius: 6px;
+            transition: all .4s ease-in-out;
+      }
+      .btn_create{
+            border: none;
+            background-color: orangered;
+            padding: 6px 12px;
+            color: white;
+            border-radius: 6px;
+            transition: all .4s ease-in-out;
+            
+      }
+      .btn_create:hover, .btn_return:hover{
+            background-color: orange;
+      }
+</style>
+{% endblock %}
+
+{% block navbar %}
+<style>
+      .navbar ul {
+      list-style: none;
+      font-size: 22px;
+      color: white;
+      padding: 10px;
+      margin-left: 50px;
+}
+.navbar ul li{
+      position: relative;
+      top: -20px;
+      display: inline-block;
+      width: 150px;
+}
+.navbar ul li::before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: chocolate;
+      left: -34px;
+}
+.menu{
+      width: 40px;
+      height: 35px;
+      border-radius: 6px;
+      background-color: white;
+      position: absolute;
+      top: 10px;
+      right: 0;
+}
+.menu hr{
+      width: 50px;
+      height: 2.5px;
+      background-color: black;
+}
+#list_menu{
+      position: absolute;
+      top: 56px;
+      right: 5px;
+      background-color: white;
+      padding: 10px 15px;
+      border-radius: 4px;
+      /* visibility: hidden; */
+      /* transition: .5s;
+      transform: scaleY(0);
+      transform-origin: top; */
+
+}
+li{
+      list-style: none;
+}
+a{
+      text-decoration: none;
+}
+</style>
+<div>
+      <nav class="navbar">
+            <ul class="">
+                  <li > OpCheck</li>
+            </ul>
+          <div class="menu">
+            <hr>
+            <hr>
+          </div>
+          <div id="list_menu">
+            <li><a href="{% url 'acceuil' %}">Dechou ulrich</a></li>
+            <hr>
+            <li><a href="{% url 'profil' %}">Voir le profil</a></li>
+            <hr>
+            <li><a href="{% url 'afficheProfil' %}">Modifier le profil</a></li>
+            <hr>
+            <li><a href="{% url 'connexion' %}">Deconnexion</a></li>
+
+          </div>
+      </nav>
+</div>
+{% endblock %}

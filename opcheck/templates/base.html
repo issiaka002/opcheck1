@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <!-- {% load static %} -->
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- <link rel="stylesheet" href="{% static 'css/connexion.css' %}">
+
+      <link rel="stylesheet" href="{% static 'css/incription.css' %}  "> -->
+      
+      {% block style %}{% endblock %}
+
+      <!-- <link rel="stylesheet" href="incription.css">
+      <link rel="stylesheet" href="profil.css">
+      <link rel="stylesheet" href="index.css"> -->
+
+
+      <title>{% block titre %}home{% endblock %}</title>
+</head>
+<body>
+      {% block navbar %}{% endblock %}
+      {% block contenu %}Aucun contenu{% endblock %}
+
+      
+</body>
+</html>
